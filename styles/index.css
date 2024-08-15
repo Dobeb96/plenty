@@ -1,3 +1,7 @@
+#home-image {
+  border-radius: 1rem 3rem 2rem;
+}
+
 .logo-circle {
   cursor: default;
   /* padding: 2rem; */
