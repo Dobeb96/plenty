@@ -1,32 +1,23 @@
-.logo-circle {
+.logo-element {
   cursor: default;
-  /* padding: 2rem; */
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  font-size: 8rem;
+  line-height: 8rem;
 }
 
-.logo-circle-1 {
-  z-index: 2;
-  background-color: orangered;
-  border: 2px solid red;
+.logo-element-1 {
+  /* No styles so far */
 }
 
-.logo-circle-2 {
-  z-index: 1;
-  margin-left: -0.4rem;
-  background-color: greenyellow;
-  border: 2px solid green;
+.logo-element-2 {
+  margin-left: 0.8rem;
+  margin-top: -1.2rem;
 }
 
-.logo-circle-3 {
-  z-index: 0;
-  margin-left: -0.8rem;
-  background-color: blueviolet;
-  border: 2px solid navy;
+.logo-element-3 {
+  margin-top: -1.2rem;
 }
 
-.pulse {
+/* .pulse {
   animation: pulse-animation 2s;
 }
 
@@ -37,4 +28,4 @@
   100% {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
-}
+} */
