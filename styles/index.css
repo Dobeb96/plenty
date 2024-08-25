@@ -1,3 +1,15 @@
+:root {
+  --color-pink: #de6ba1;
+  --color-brown: #b06e6d;
+  --color-gray: #999087;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .logo-element {
   cursor: default;
   font-size: 8rem;
@@ -5,16 +17,19 @@
 }
 
 .logo-element-1 {
+  color: var(--color-pink);
   /* No styles so far */
 }
 
 .logo-element-2 {
-  margin-left: 0.8rem;
-  margin-top: -1.2rem;
+  color: var(--color-brown);
+  margin-left: 2rem;
+  margin-top: -2.2rem;
 }
 
 .logo-element-3 {
-  margin-top: -1.2rem;
+  color: var(--color-gray);
+  margin-top: -2.2rem;
 }
 
 /* .pulse {
