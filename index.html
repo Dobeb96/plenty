@@ -26,15 +26,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <!-- End of Google Fonts -->
 
-  <!-- Scripts -->
+  <!-- Start of Scripts -->
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- MerakiUI small js lib for navbar toggling -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- AOL.js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- End of Scripts -->
 </head>
 
 <body id="top">
   <!-- Start of Navbar -->
-  <div class="fixed w-full">
+  <div class="fixed z-20 w-full">
     <nav x-data="{ isOpen: false }" class="relative bg-white shadow">
       <div class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
         <div class="flex items-center justify-between">
@@ -119,12 +124,13 @@
   <!-- Start of Hello -->
   <div id="hello" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
-    <div class="w-10/12 md:max-w-md max-w-full">
+    <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
       <img loading="lazy" class="w-full h-auto object-cover" src="images/hello.jpg"
         alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
     </div>
 
-    <div class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
+    <div data-aos="fade-up" data-aos-delay="150"
+      class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
       <div class="max-w-prose">
         <h2 class="text-2xl font-semibold text-gray-800">Cześć!</h2>
         <p class="text-gray-800 text-justify">
@@ -141,7 +147,8 @@
   <!-- Start of Poznajmy się -->
   <div id="poznajmy-sie" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
-    <div class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4">
+    <div data-aos="fade-up" data-aos-delay="150"
+      class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4">
       <h2 class="text-2xl font-semibold text-gray-800">Cześć!</h2>
       <p class="text-gray-800 text-justify max-w-prose">
         Nazywam się Paulina Leśniak i od 8 lat pomagam innym w spełnianiu ich językowych celów. Angielski uwielbiam
@@ -159,7 +166,7 @@
       </p>
     </div>
 
-    <div class="w-10/12 md:max-w-md max-w-full">
+    <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
       <img loading="lazy" class="w-full h-auto object-cover" src="images/poznajmy sie.jpg"
         alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
     </div>
@@ -169,12 +176,13 @@
   <!-- Start of Ucz się ze mną -->
   <div id="ucz-sie-ze-mna" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
-    <div class="w-10/12 md:max-w-md max-w-full">
+    <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
       <img loading="lazy" class="w-full h-auto object-cover" src="images/ucz sie ze mna.png"
         alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
     </div>
 
-    <div class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
+    <div data-aos="fade-up" data-aos-delay="150"
+      class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
       <div class="max-w-prose">
         <h2 class="text-2xl font-semibold text-gray-800">Jak wyglądają zajęcia ze mną?</h2>
         <ul class="text-gray-800 text-justify list-disc ml-4">
@@ -201,6 +209,16 @@
   <!-- End of Ucz się ze mną -->
 
   <script>
+    // AOL.js
+    AOS.init();
+
+    // AOS.init({
+    //   easing: 'ease-out-back',
+    //   duration: 1000
+    // });
+
+
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
