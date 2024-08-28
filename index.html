@@ -32,7 +32,7 @@
   <!-- End of Scripts -->
 </head>
 
-<body>
+<body id="top">
   <!-- Start of Navbar -->
   <nav x-data="{ isOpen: false }" class="relative bg-white shadow">
     <div class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
@@ -64,13 +64,13 @@
         class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
         <div class="flex flex-col lg:flex-row">
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-            href="#">Home</a>
+            href="#top">Home</a>
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-            href="#">Cześć!</a>
+            href="#hello">Cześć!</a>
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-            href="#">Poznajmy się</a>
+            href="#poznajmy-sie">Poznajmy się</a>
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-            href="#">Ucz się ze mną</a>
+            href="#ucz-sie-ze-mna">Ucz się ze mną</a>
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
             href="#">Co zyskasz</a>
           <a class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
@@ -82,7 +82,7 @@
   <!-- End of Navbar -->
 
   <!-- Start of Home -->
-  <div style="height: min(90vh, 900px)" class="px-24 flex flex-wrap container mx-auto">
+  <div id="home" style="height: min(90vh, 900px)" class="px-24 flex flex-wrap container mx-auto">
     <div class="md:w-6/12 w-full h-full flex items-center">
       <div>
         <!-- Start of Logo -->
@@ -108,16 +108,15 @@
   </div>
   <!-- End of Home -->
 
-  <div class="h-12"></div>
-
   <!-- Start of Hello -->
-  <div style="min-height: min(90vh, 900px)" class="px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
+  <div id="hello" style="min-height: min(90vh, 900px)"
+    class="py-10 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
     <div class="w-10/12 md:max-w-md max-w-full">
       <img loading="lazy" class="w-full h-auto object-cover" src="images/hello.jpg"
         alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
     </div>
 
-    <div class="grow self-center md:ml-0 ml-12 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
+    <div class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4 flex justify-end">
       <div class="max-w-prose">
         <h2 class="text-2xl font-semibold text-gray-800">Cześć!</h2>
         <p class="text-gray-800 text-justify">
@@ -131,11 +130,10 @@
   </div>
   <!-- End of Hello -->
 
-  <div class="h-12"></div>
-
   <!-- Start of Poznajmy się -->
-  <div style="min-height: min(90vh, 900px)" class="px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
-    <div class="grow self-center md:ml-0 ml-12 mt-[-12rem] bg-white md:p-0 p-4">
+  <div id="poznajmy-sie" style="min-height: min(90vh, 900px)"
+    class="py-10 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
+    <div class="self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4">
       <h2 class="text-2xl font-semibold text-gray-800">Cześć!</h2>
       <p class="text-gray-800 text-justify max-w-prose">
         Nazywam się Paulina Leśniak i od 8 lat pomagam innym w spełnianiu ich językowych celów. Angielski uwielbiam
