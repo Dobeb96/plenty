@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
   --color-pink: #de6ba1;
   --color-brown: #b06e6d;
