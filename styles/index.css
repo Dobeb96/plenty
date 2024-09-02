@@ -8,43 +8,6 @@ h1, h2, h3, h4, h5, h6 {
   --color-gray: #999087;
 }
 
-.logo {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+#logo {
+  width: 240px;
 }
-
-.logo-element {
-  cursor: default;
-  font-size: 8rem;
-  line-height: 8rem;
-}
-
-.logo-element-1 {
-  color: var(--color-pink);
-  /* No styles so far */
-}
-
-.logo-element-2 {
-  color: var(--color-brown);
-  margin-left: 2rem;
-  margin-top: -2.2rem;
-}
-
-.logo-element-3 {
-  color: var(--color-gray);
-  margin-top: -2.2rem;
-}
-
-/* .pulse {
-  animation: pulse-animation 2s;
-}
-
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
-} */
