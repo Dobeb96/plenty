@@ -86,7 +86,7 @@
               href="#co-zyskasz">Co zyskasz</a>
             <a @click="isOpen = !isOpen"
               class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#">Kontakt</a>
+              href="#kontakt">Kontakt</a>
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@
   <!-- Start of Co zyskasz -->
   <div id="co-zyskasz" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
-    <div data-aos="fade-up" data-aos-delay="150"
+    <div data-aos="fade-up-right" data-aos-delay="150"
       class="z-10 self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] bg-white md:p-0 p-4">
       <div class="max-w-prose">
         <h2 class="font-semibold text-gray-800">Jeżeli:</h2>
@@ -283,6 +283,48 @@
   </div>
   <!-- End of Co zyskasz -->
 
+  <!-- Start of Kontakt -->
+  <div id="kontakt" style="min-height: min(90vh, 900px)"
+    class="pt-20 pb-10 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
+    <div data-aos="fade" class="w-10/12 sm:max-w-sm max-w-full">
+      <img class="w-full h-auto object-cover" src="images/kontakt.jpg" alt="Paulina Leśniak Plenty" />
+    </div>
+    <div>
+      <div class="max-w-prose">
+        Śmiało, napisz do mnie na
+        <p class="flex gap-1 items-center mb-1">
+          <ion-icon name="mail-outline"></ion-icon>
+          <a class="text-blue-500" href="mailto:paulina@plenty.com.pl">paulina@plenty.com.pl</a>
+        </p>
+        <p class="flex gap-1 items-center mb-1">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <a class="text-blue-500" href="https://www.facebook.com/plentypaulinalesniak/" target="_blank">
+            Plenty Paulina Leśniak
+          </a>
+        </p>
+        <p class="flex gap-1 items-center mb-1">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <a class="text-blue-500" href="https://www.instagram.com/pl_en_ty/" target="_blank">
+            pl_en_ty
+          </a>
+        </p>
+        <p class="flex gap-1 items-center mb-1">
+          <ion-icon name="logo-linkedin"></ion-icon>
+          <a class="text-blue-500" href="https://www.linkedin.com/in/paulina-lesniak/" target="_blank">
+            Paulina Leśniak
+          </a>
+        </p>
+      </div>
+      <!-- Start of Footer -->
+      <footer class="mt-10 mb-2 text-sm text-gray-800 mx-auto max-w-prose">
+        Twoje dane będę przetwarzane w celu skontaktowania się z Tobą. Więcej informacji o zasadach przetwarzania danych
+        przez Plenty Paulina Leśniak znajdziesz w Polityce prywatności.
+      </footer>
+      <!-- End of Footer -->
+    </div>
+  </div>
+  <!-- End of Kontakt -->
+
   <script>
     // AOL.js
     AOS.init();
@@ -304,6 +346,9 @@
       });
     });
   </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
