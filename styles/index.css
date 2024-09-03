@@ -38,7 +38,6 @@ body {
 
 .font-semibold {
   color: var(--color-font) !important;
-  /* font-family: "Poppins", sans-serif; */
 }
 
 #logo {
