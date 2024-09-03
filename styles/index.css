@@ -2,6 +2,7 @@
   --color-pink: #de6ba1;
   --color-brown: #b06e6d;
   --color-gray: #999087;
+  --color-font: #54534d;
   --color-background: #fffdfa;
 }
 
@@ -9,8 +10,20 @@ body {
   background-color: var(--color-background);
 }
 
+#nav {
+  background-color: var(--color-background);
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid var(--color-font);
+}
+
 .font-semibold {
-  color: #54534d !important;
+  color: var(--color-font) !important;
   font-family: "Poppins", sans-serif;
 }
 
