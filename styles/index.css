@@ -1,11 +1,17 @@
-.font-semibold {
-  font-family: "Poppins", sans-serif;
-}
-
 :root {
   --color-pink: #de6ba1;
   --color-brown: #b06e6d;
   --color-gray: #999087;
+  --color-background: #fffdfa;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.font-semibold {
+  color: #54534d !important;
+  font-family: "Poppins", sans-serif;
 }
 
 #logo {
