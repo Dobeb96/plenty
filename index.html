@@ -67,7 +67,7 @@
 
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-          class="bg-section absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out  lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out  lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
           <div class="flex flex-col lg:flex-row">
             <a @click="isOpen = !isOpen"
               class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
@@ -104,21 +104,20 @@
   <!-- <img class="placek1" src="images/placek1.svg" /> -->
 
   <!-- Start of Hello -->
-  <div id="hello" style="min-height: min(90vh, 900px)"
-    class="pt-20 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
+  <div id="hello" class="mt-20 px-4 py-12 flex md:flex-nowrap flex-wrap mx-auto gap-4 justify-evenly">
     <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-      <img class="w-full h-auto object-cover" src="images/hello.jpg" alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
+      <img style="border-radius: 50% 20% / 10% 40%;" class="w-full h-auto object-cover" src="images/hello.jpg"
+        alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
     </div>
 
-    <div data-aos="fade-up" data-aos-delay="150"
-      class="bg-section self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-4 flex justify-end">
-      <div class="max-w-prose bg-section-pink">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cześć!</h2>
+    <div data-aos="fade-up" data-aos-delay="150" style="border-radius: 50% 20% / 10% 40%;"
+      class="self-center md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 flex justify-end">
+      <div style="border-radius: 10px 100px / 120px;" class="max-w-sm bg-white p-16">
+        <h2 class="text-2xl color-pink font-semibold mb-4">Cześć! 👋</h2>
         <p class="text-gray-800 text-justify">
-          Tu Paulina, nauczycielka-freelancerka. Jeśli zależy Ci na profesjonalnym i praktycznym podejściu do nauki
-          języka
-          angielskiego, to dobrze trafiłaś/eś! Z przyjemnością Ci pomogę i zainspiruję do pokonywania kolejnych
-          barier w komunikowaniu się.
+          Tu Paulina, nauczycielka-freelancerka. Jeśli zależy Ci na profesjonalnym i&nbsp;praktycznym podejściu do nauki
+          języka angielskiego, to dobrze trafiłaś/eś! Z&nbsp;przyjemnością Ci pomogę i&nbsp;zainspiruję do pokonywania
+          kolejnych barier w&nbsp;komunikowaniu się.
         </p>
       </div>
     </div>
@@ -128,9 +127,9 @@
   <!-- Start of Poznajmy się -->
   <div id="poznajmy-sie" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
-    <div data-aos="fade-up" data-aos-delay="150"
-      class="bg-section z-10 self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-4">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Poznajmy się</h2>
+    <div data-aos="fade-up" data-aos-delay="150" style="border-radius: 30% 20% / 20% 40%;"
+      class="z-10 bg-white self-center md:mt-0 mt-[-12rem] p-16">
+      <h2 class="text-2xl color-gray font-semibold text-gray-800 mb-4">Poznajmy się</h2>
       <p class="text-gray-800 text-justify max-w-prose">
         Nazywam się Paulina Leśniak i od 8 lat pomagam innym w spełnianiu ich językowych celów. Angielski uwielbiam
         od…zawsze 🙃. Po ukończeniu studiów na UJ postanowiłam dzielić się swoją pasją, wiedzą i wsparciem z innymi.
@@ -154,7 +153,8 @@
     </div>
 
     <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-      <img class="w-full h-auto object-cover" src="images/poznajmy sie.jpg" alt="Paulina Leśniak Plenty" />
+      <img style="border-radius: 30% 20% / 20% 40%;" class="w-full h-auto object-cover" src="images/poznajmy sie.jpg"
+        alt="Paulina Leśniak Plenty" />
     </div>
   </div>
   <!-- End of Poznajmy się -->
@@ -163,13 +163,14 @@
   <div id="ucz-sie-ze-mna" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4">
     <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-      <img class="w-full h-auto object-cover" src="images/ucz sie ze mna.png" alt="Paulina Leśniak Plenty" />
+      <img style="border-radius: 40% 20% / 10% 40%;" class="w-full h-auto object-cover" src="images/ucz sie ze mna.png"
+        alt="Paulina Leśniak Plenty" />
     </div>
 
     <div data-aos="fade-up" data-aos-delay="150"
-      class="bg-section self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-4 flex justify-end">
-      <div class="max-w-prose">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Jak wyglądają zajęcia ze mną?</h2>
+      class="self-center grow md:mt-0 mt-[-12rem] md:p-0 p-4 flex justify-evenly">
+      <div style="border-radius: 50% 20% / 10% 40%;" class="max-w-prose bg-white p-16">
+        <h2 class="text-2xl color-brown font-semibold text-gray-800 mb-4">Jak wyglądają zajęcia ze mną?</h2>
         <ul class="text-gray-800 text-justify list-disc ml-4">
           <li>zajęcia przygotowuję w oparciu o Twoje potrzeby i zainteresowania; proponuję Ci realistyczne i praktyczne
             rozwiązania</li>
@@ -197,7 +198,7 @@
   <div id="co-zyskasz" style="min-height: min(90vh, 900px)"
     class="pt-20 px-4 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4">
     <div data-aos="fade-up-right" data-aos-delay="150"
-      class="bg-section z-10 self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-4">
+      class="z-10 self-center grow md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-4">
       <div class="max-w-prose">
         <h2 class="text-2xl font-semibold text-gray-800">Jeżeli:</h2>
         <ul class="text-gray-800 text-justify list-disc ml-4">
@@ -221,21 +222,6 @@
             praktyce i utrwalaniu zdobytej wiedzy</li>
           <li>otrzymasz pełne zaangażowanie z mojej strony, i mam nadzieję, że vice versa 😊</li>
         </ul>
-      </div>
-      <div class="max-w-prose">
-        <h2 class="font-semibold text-gray-800">Zanim napiszesz do mnie, żeby umówić się na pierwsze spotkanie,
-          sprawdź czy będzie nam się dobrze pracowało:</h2>
-        <ul class="text-gray-800 text-justify list-disc ml-4">
-          <li>czujesz motywację, żeby rozpocząć naukę lub odrobinę Ci jej brakuje, ale czujesz, że rozmowa ze mną może
-            to zmienić?</li>
-          <li>możesz poświęcić czas na kontakt z angielskim poza naszymi zajęciami?</li>
-          <li>pragniesz zrealizować konkretny cel i masz świadomość, że potrzeba pracy aby go osiągnąć?
-          </li>
-        </ul>
-      </div>
-      <div class="max-w-prose font-semibold">
-        Jeśli te punkty opisują Twoje nastawienie - wspaniale!
-        Z ogromną przyjemnością pomogę Ci osiągnąć Twój językowy cel 🙂
       </div>
     </div>
 

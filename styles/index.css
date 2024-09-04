@@ -4,27 +4,43 @@
   --color-gray: #989087;
   --color-font: #54534d;
   --color-background: #fffdfa;
+  --color-calm: #f9f6ed;
+}
+
+.bg-white {
+  background-color: var(--color-background) !important;
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.bg-calm {
+  background-color: var(--color-calm);
+}
+
+.color-white * {
+  color: white !important;
 }
 
 .color-font {
-color: var(--color-font);
+  color: var(--color-font);
 }
 
 .color-pink {
-  color: var(--color-pink);
+  color: var(--color-pink) !important;
 }
 
 .color-brown {
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
 }
 
 .color-gray {
-  color: var(--color-gray);
+  color: var(--color-gray) !important;
 }
 
 body,
-#nav,
-.bg-section {
+#nav {
   background-color: var(--color-background);
 }
 
@@ -42,9 +58,8 @@ body {
 #logo-circle {
   width: 40px;
   height: 40px;
-  padding: 2px;
+  /* padding: 2px; */
   border-radius: 50%;
-  border: 1px solid var(--color-font);
 }
 
 #logo-main {
@@ -56,11 +71,15 @@ body {
 }
 
 .font-semibold {
-  color: var(--color-font) !important;
+  color: var(--color-font);
 }
 
 #logo {
   width: 240px;
+}
+
+#hello {
+  background-color: var(--color-pink);
 }
 
 #google-scheduler button {
