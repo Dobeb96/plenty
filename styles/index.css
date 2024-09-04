@@ -1,9 +1,25 @@
 :root {
   --color-pink: #de6ba1;
   --color-brown: #b06e6d;
-  --color-gray: #999087;
+  --color-gray: #989087;
   --color-font: #54534d;
   --color-background: #fffdfa;
+}
+
+.color-font {
+color: var(--color-font);
+}
+
+.color-pink {
+  color: var(--color-pink);
+}
+
+.color-brown {
+  color: var(--color-brown);
+}
+
+.color-gray {
+  color: var(--color-gray);
 }
 
 body,
@@ -33,7 +49,10 @@ body {
 
 #logo-main {
   width: 100%;
-  /* height: 100%; */
+}
+
+.podcast-button {
+  background-color: var(--color-pink);
 }
 
 .font-semibold {
@@ -42,4 +61,19 @@ body {
 
 #logo {
   width: 240px;
+}
+
+#google-scheduler button {
+  color: white !important;
+  font-weight: normal;
+  padding: 8px 24px !important;
+  border-radius: 8px !important;
+  line-height: 24px !important;
+  letter-spacing: .4px !important;
+}
+
+#kontakt a {
+  color: inherit;
+  /* color: white; */
+  /* background-color: var(--color-gray); */
 }
