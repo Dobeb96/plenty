@@ -24,7 +24,7 @@
 }
 
 .color-font {
-  color: var(--color-font);
+  color: var(--color-font) !important;
 }
 
 .color-pink {
@@ -80,6 +80,14 @@ body {
 
 #hello {
   background-color: var(--color-pink);
+}
+
+#ucz-sie-ze-mna {
+  background-color: var(--color-brown);
+}
+
+#kontakt {
+  background-color: var(--color-gray);
 }
 
 #google-scheduler button {
