@@ -18,331 +18,237 @@
   </script>
   <!-- End of Google tag (gtag.js) -->
 
-  <link rel="stylesheet" type="text/css" href="styles/index.css" />
-
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:display=swap" rel="stylesheet"> -->
   <!-- End of Google Fonts -->
 
-  <!-- Start of Scripts -->
+  <link rel="stylesheet" type="text/css" href="./assets/fonts/unicons/unicons.css">
+
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .material-symbols-outlined {
+      font-size: 24px;
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+  <!-- End of Google Icons -->
+
+  <!-- CSS -->
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- MerakiUI small js lib for navbar toggling -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- AOL.js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- End of Scripts -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- End of CSS -->
 </head>
 
-<body id="top">
-  <!-- Start of Navbar -->
-  <div class="fixed z-20 w-full">
-    <nav id="nav" x-data="{ isOpen: false }" class="relative shadow">
-      <div class="container px-6 py-2 mx-auto lg:flex lg:justify-between lg:items-center">
-        <div class="flex items-center justify-between">
-          <a href="#top">
-            <!-- <div>plenty</div> -->
-            <img id="logo-circle" src="./images/plenty_logo.svg" alt="Plenty.com.pl logo małe" />
-          </a>
-
-          <!-- Mobile menu button -->
-          <div class="flex lg:hidden">
-            <button x-cloak @click="isOpen = !isOpen" type="button"
-              class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
-              <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-              </svg>
-
-              <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+    <div class="container xl:flex-row lg:flex-row !flex-nowrap items-center">
+      <div class="navbar-brand w-full">
+        <a href="https://plenty.com.pl/">
+          <img width="28" src="./images/plenty_logo.svg" alt="Plenty Logo">
+        </a>
+      </div>
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header xl:hidden lg:hidden flex items-center justify-between flex-row p-6">
+          <h3 class="text-white xl:text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)] !mb-0">Plenty</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
-
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out  lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-          <div class="flex flex-col lg:flex-row">
-            <a @click="isOpen = !isOpen"
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#hello">Cześć!</a>
-            <a @click="isOpen = !isOpen"
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#poznajmy-sie">Poznajmy się</a>
-            <a @click="isOpen = !isOpen"
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#ucz-sie-ze-mna">Ucz się ze mną</a>
-            <a @click="isOpen = !isOpen"
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#co-zyskasz">Co zyskasz?</a>
-            <a @click="isOpen = !isOpen"
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 lg:mx-4 lg:my-0"
-              href="#kontakt">Kontakt</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- End of Navbar -->
-
-  <!-- Start of Home -->
-  <div id="home" class="flex flex-wrap container mx-auto">
-    <div class="w-full flex-col items-center mt-4 mx-4">
-      <!-- Start of Logo -->
-      <img data-aos="zoom-in" id="logo-main" src="./images/logo_arrows.png" alt="Plenty.com.pl logo małe" />
-      <!-- End of Logo -->
-    </div>
-  </div>
-  <!-- End of Home -->
-
-  <!-- <img class="placek1" src="images/placek1.svg" /> -->
-
-  <!-- Start of Hello -->
-  <div id="hello">
-    <div class="mt-10 px-4 py-12 flex md:flex-nowrap flex-wrap mx-auto gap-12 justify-evenly container">
-      <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-        <img style="border-radius: 50% 20% / 10% 40%;" class="w-full h-auto object-cover" src="images/hello.jpg"
-          alt="Paulina Leśniak Plenty Zdjęcie Profilowe" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="150" style="border-radius: 50% 20% / 10% 40%;"
-        class="self-center md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 flex justify-end">
-        <div style="border-radius: 50% 20% / 10% 40%;" class="max-w-sm bg-white p-16">
-          <h2 class="text-2xl color-pink font-semibold mb-4">Cześć! 👋</h2>
-          <p class="text-gray-800 md:text-justify text-left">
-            Tu Paulina, nauczycielka-freelancerka. Jeśli zależy Ci na profesjonalnym i&nbsp;praktycznym podejściu do
-            nauki
-            języka angielskiego, to dobrze trafiłaś/eś! Z&nbsp;przyjemnością Ci pomogę i&nbsp;zainspiruję do pokonywania
-            kolejnych barier w&nbsp;komunikowaniu się.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End of Hello -->
-
-  <!-- Start of Poznajmy się -->
-  <div id="poznajmy-sie" style="min-height: min(90vh, 900px)"
-    class="pt-20 px-4 py-12 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-4 justify-evenly">
-    <div data-aos="fade-up" data-aos-delay="150" style="border-radius: 30% 20% / 20% 40%;"
-      class="z-10 bg-white self-center md:mt-0 mt-[-12rem] p-16 md:text-justify text-left max-w-prose text-gray-800">
-      <h2 class="text-2xl color-font font-semibold mb-4">Poznajmy się</h2>
-      <p>
-        Nazywam się Paulina Leśniak i od 8 lat pomagam innym w spełnianiu ich językowych celów. Angielski uwielbiam
-        od…zawsze 🙃. Po ukończeniu studiów na UJ postanowiłam dzielić się swoją pasją, wiedzą i wsparciem z innymi.
-      </p>
-      <br />
-      <p>
-        Pracowałam w prywatnym liceum i szkole językowej prowadząc zajęcia zdalne, stacjonarne oraz in-company. Brałam
-        udział w wyjazdach dydaktycznych i wielu szkoleniach. Stale się rozwijam i podejmuję działania-wyzwania, czego
-        dowodem jest założenie własnego biznesu językowego!
-      </p>
-      <br />
-      <p>
-        Na co dzień, w Plenty, prowadzę indywidualne zajęcia języka angielskiego online dla dorosłych i młodzieży.
-      </p>
-      <a title="Kliknij i posłuchaj"
-        href="https://podcasters.spotify.com/pod/show/tudro-talks6/episodes/Paulina---English-Teaching-Business-Owner-e2mp942"
-        target="_blank" rel="noopener noreferrer" class="inline-block podcast-button px-6 mt-4 py-2 font-medium tracking-wide text-white transition-colors duration-300
-        transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-        Posłuchaj odcinka podcastu z moim udziałem
-      </a>
-    </div>
-
-    <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-      <img style="border-radius: 30% 20% / 20% 40%;" class="w-full h-auto object-cover" src="images/poznajmy sie.jpg"
-        alt="Paulina Leśniak Plenty" />
-    </div>
-  </div>
-  <!-- End of Poznajmy się -->
-
-  <!-- Start of Ucz się ze mną -->
-  <div id="ucz-sie-ze-mna" style="min-height: min(90vh, 900px)">
-    <div class="pt-20 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-4 justify-evenly pb-12">
-      <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-        <img style="border-radius: 40% 20% / 10% 40%;" class="w-full h-auto object-cover"
-          src="images/ucz sie ze mna.png" alt="Paulina Leśniak Plenty" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="150"
-        class="self-center md:mt-0 mt-[-12rem] md:p-0 p-4 flex justify-evenly">
-        <div style="border-radius: 50% 20% / 10% 40%;" class="max-w-prose bg-white p-16">
-          <h2 class="text-2xl color-brown font-semibold text-gray-800 mb-4">Jak wyglądają zajęcia ze mną?</h2>
-          <ul class="text-gray-800 md:text-justify text-left list-disc ml-4">
-            <li>zajęcia przygotowuję w oparciu o Twoje potrzeby i zainteresowania; proponuję Ci realistyczne i
-              praktyczne
-              rozwiązania</li>
-            <li>stawiam głównie na komunikację, a zajęcia przebiegają w pozytywnej i przyjaznej atmosferze aby ją
-              maksymalnie
-              ułatwić</li>
-            <li>korzystam z autentycznych materiałów na podstawie których tworzę oryginalne zajęcia; posiadam dostęp do
-              platform edukacyjnych z zasobami premium i wiem jak je wykorzystać, aby pobudzić wyobraźnię, zachęcić do
-              rozmowy oraz ciekawie wprowadzić użyteczne zagadnienia językowe</li>
-            <li>prowadzę zajęcia w formie zdalnej korzystając z narzędzi Google aby maksymalnie ułatwić i usprawnić
-              naszą
-              współpracę</li>
-            <li>proponuję zadania domowe lub wskazówki jak dodatkowo możesz pozostać w kontakcie z angielskim nawet gdy
-              nie ma mnie obok - jeśli chcesz szybko osiągnąć postępy to samodzielna praca będzie kluczowym elementem 🙂
-            </li>
-            <li>na każdych zajęciach jest czas na krótką powtórkę materiału z poprzedniej lekcji, dzięki czemu utrwalasz
-              w
-              sobie nawyk regularnego powtarzania poznawanych zagadnień</li>
-            <li>traktuję Cię po partnersku; wspólnie pracujemy nad zwiększeniem Twojej pewności i biegłości językowej
-            </li>
+        <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ucz-sie-ze-mna">Ucz się ze mną</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
           </ul>
+          <!-- /.navbar-nav -->
+          <div class="offcanvas-footer xl:hidden lg:hidden">
+            <div>
+              <a href="mailto:paulina@plenty.com.pl" class="link-inverse">paulina@plenty.com.pl</a>
+              <nav class="nav social social-white mt-4">
+                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
+                  target="_blank" href="https://www.facebook.com/plentypaulinalesniak/"><i
+                    class="uil uil-facebook-f before:content-['\eae2'] text-[1rem] text-[#4470cf]"></i></a>
+                <a class="m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
+                  target="_blank" href="https://www.instagram.com/pl_en_ty/"><i
+                    class="uil uil-instagram before:content-['\eb9c'] text-[1rem] text-[#d53581]"></i></a>
+              </nav>
+              <!-- /.social -->
+            </div>
+          </div>
+          <!-- /.offcanvas-footer -->
         </div>
+        <!-- /.offcanvas-body -->
       </div>
-    </div>
-  </div>
-  <!-- End of Ucz się ze mną -->
-
-  <!-- Start of Co zyskasz -->
-  <div id="co-zyskasz" style="min-height: min(90vh, 900px)"
-    class="pt-20 px-4 py-12 flex container md:flex-nowrap flex-wrap-reverse mx-auto gap-12 justify-evenly">
-    <div data-aos="fade-up-right" data-aos-delay="150" style="border-radius: 50% 20% / 10% 40%;"
-      class="bg-white z-10 self-center md:ml-0 ml-12 md:mt-0 mt-[-12rem] md:p-0 p-16">
-      <div class="max-w-prose">
-        <h2 class="text-2xl color-font font-semibold text-gray-800">Jeżeli</h2>
-        <ul class="text-gray-800 md:text-justify text-left list-disc ml-4">
-          <li>chcesz podszkolić konkretną umiejętność językową lub opanować konkretny zakres materiału</li>
-          <li>chcesz przygotować się do egzaminu językowego (E8, matura, lektorat na studiach)</li>
-          <li>chcesz komunikować się profesjonalnie w pracy z klientem zagranicznym</li>
-          <li>chcesz poczuć się pewniej przed urlopem za granicą</li>
-          <li>nie wiesz, jak dalej rozwijać się językowo i jak zaplanować naukę, aby była efektywna</li>
-          <li>interesuje Cię rzetelna ocena Twoich umiejętności i chcesz wiedzieć konkretnie, w jakich obszarach
-            potrzebujesz wsparcia</li>
-        </ul>
-      </div>
-
-      <div class="max-w-prose mt-8">
-        <h2 class="text-2xl color-font font-semibold text-gray-800">to zajęcia indywidualne sprawdzą się idealnie dzięki
-          temu, że
-        </h2>
-        <ul class="text-gray-800 md:text-justify text-left list-disc ml-4">
-          <li>skupię 100% uwagi na Tobie, Twojej wymowie i wypowiedziach w języku angielskim</li>
-          <li>przygotuję zajęcia w oparciu o Twoje potrzeby po to, aby zrealizować konkretny cel, który chcesz osiągnąć
+      <!-- /.navbar-collapse -->
+      <div class="navbar-other w-full !flex !ml-auto">
+        <ul class="navbar-nav !flex-row !items-center !ml-auto">
+          <li class="nav-item hidden xl:block lg:block md:block">
+            <a href="#contact"
+              class="btn btn-sm btn-primary text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:border-[#3f78e0] focus:shadow-[rgba(92,140,229,1)] active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] !rounded-[50rem]">
+              Zarezerwuj spotkanie
+            </a>
           </li>
-          <li>spędzisz maksymalnie dużo czasu nie tylko na poznawaniu języka, ale przede wszystkim na używaniu go w
-            praktyce i utrwalaniu zdobytej wiedzy</li>
-          <li>otrzymasz pełne zaangażowanie z mojej strony, i mam nadzieję, że vice versa&nbsp;😊</li>
+          <li class="nav-item xl:hidden lg:hidden">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
         </ul>
-        <p class="mt-4">Z ogromną przyjemnością pomogę Ci osiągnąć Twój językowy cel!</p>
+        <!-- /.navbar-nav -->
       </div>
+      <!-- /.navbar-other -->
     </div>
+    <!-- /.container -->
+  </nav>
+  <!-- End of Navigation -->
 
-    <div data-aos="fade" class="w-10/12 md:max-w-md max-w-full">
-      <img style="border-radius: 50% 20% / 10% 40%;" class="w-full h-auto object-cover" src="images/co zyskasz.jpg"
-        alt="Paulina Leśniak Plenty" />
-    </div>
-  </div>
-  <!-- End of Co zyskasz -->
-
-  <!-- Start of Kontakt -->
-  <div id="kontakt">
-    <div class="pt-20 pb-10 px-4 flex container md:flex-nowrap flex-wrap mx-auto gap-12 justify-evenly">
-      <div data-aos="fade" class="w-10/12 sm:max-w-sm max-w-full">
-        <img style="border-radius: 50% 20% / 10% 40%;" class="w-full h-auto object-cover" src="images/kontakt.jpg"
-          alt="Paulina Leśniak Plenty" />
-      </div>
-
-      <div style="border-radius: 50% 20% / 10% 40%;" class="max-w-prose bg-white p-16 z-10 md:mt-0 mt-[-8rem]">
-        <h2 class="text-2xl color-gray font-semibold text-gray-800 mb-8">
-          Skontaktuj się ze mną
-        </h2>
-
-        <p class="mb-2">
-          Śmiało, napisz do mnie na
-        </p>
-        <p class="flex gap-2 items-center mb-1">
-          <ion-icon class="color-font" name="mail-outline"></ion-icon>
-          <a class="text-blue-500" href="mailto:paulina@plenty.com.pl">paulina@plenty.com.pl</a>
-        </p>
-
-        <div class="mt-8"></div>
-        <p class="mb-2">
-          Znajdź mnie na social mediach
-        </p>
-        <p class="flex gap-2 items-center mb-1">
-          <ion-icon class="color-pink" name="logo-facebook"></ion-icon>
-          <a class="text-blue-500" href="https://www.facebook.com/plentypaulinalesniak/" target="_blank">
-            Plenty Paulina Leśniak
-          </a>
-        </p>
-        <p class="flex gap-2 items-center mb-1">
-          <ion-icon class="color-brown" name="logo-instagram"></ion-icon>
-          <a class="text-blue-500" href="https://www.instagram.com/pl_en_ty/" target="_blank">
-            pl_en_ty
-          </a>
-        </p>
-        <p class="flex gap-2 items-center mb-1">
-          <ion-icon class="color-gray" name="logo-linkedin"></ion-icon>
-          <a class="text-blue-500" href="https://www.linkedin.com/in/paulina-lesniak/" target="_blank">
-            Paulina Leśniak
-          </a>
-        </p>
-
-        <div class="mt-8"></div>
-        Zarezerwuj 15 minutowe spotkanie przez Google Meet. <br />Poznamy się i ustalimy szczegóły współpracy 🤝
-        <div id="google-scheduler" class="my-4">
-          <!-- Google Calendar Appointment Scheduling begin -->
-          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-          <script>
-            (function () {
-              var target = document.currentScript;
-              window.addEventListener('load', function () {
-                calendar.schedulingButton.load({
-                  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c1qgyuNFp0dOcKnkUzUQLv_yTi2S5Xy2iOW1F4jEUtOxSXtHVkxS4Yl57a5lEXBjg_ympEKNS?gv=true',
-                  color: '#de6ba1',
-                  label: 'Zarezerwuj spotkanie',
-                  target,
-                });
-              });
-            })();
-          </script>
-          <!-- end Google Calendar Appointment Scheduling -->
+  <!-- Features -->
+  <section class="wrapper">
+    <div class="container pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
+      <div class="flex flex-wrap mx-[-15px] !text-center">
+        <div
+          class="md:w-11/12 lg:w-9/12 xl:w-8/12 xxl:w-7/12 w-full flex-[0_0_auto] px-[15px] max-w-full !mx-auto !relative">
+          <img src="./assets/img/svg/doodle3.svg" class="!h-[3rem] absolute hidden xl:block lg:block"
+            style="top: -20%; right: -12%" alt="image">
+          <img src="./assets/img/svg/doodle9.svg" class="!h-[7rem] absolute hidden xl:block lg:block"
+            style="bottom: 5%; left: -17%" alt="image">
+          <h2 class="text-[0.8rem] uppercase text-[#aab0bc] mb-3 !text-center !leading-[1.35]">Ucz się ze mną
+          </h2>
+          <h3 class="text-[calc(1.325rem_+_0.9vw)] font-bold !leading-[1.25] xl:text-[2rem] mb-14 !text-center">
+            <span class="text-gradient gradient-7">Jak wyglądają</span> zajęcia ze mną?
+          </h3>
         </div>
-
-        <!-- Start of Footer -->
-        <footer class="italic text-sm text-gray-800">
-          * Twoje dane będę przetwarzane w celu skontaktowania się z Tobą.
-        </footer>
-        <!-- End of Footer -->
+        <!-- /column -->
       </div>
+      <!-- /.row -->
+      <div class="flex flex-wrap mx-[-15px] items-start">
+        <div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[15px] max-w-full xl:!sticky lg:!sticky"
+          style="top: 8rem;">
+          <figure class="m-0 p-0 !rounded-[0.8rem]"><img class="w-full max-w-full !h-auto !rounded-[0.8rem]"
+              src="./images/ucz sie ze mna.png" alt="Zdjęcie Pauliny Leśniak - Plenty"></figure>
+        </div>
+        <!-- /column -->
+        <div class="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] px-[15px] max-w-full ml-auto">
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg bg-[#e6e5f4] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  partner_exchange
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Dopasowanie</h4>
+              <p>Zajęcia przygotowuję w oparciu o Twoje potrzeby i zainteresowania; proponuję Ci
+                realistyczne i praktyczne rozwiązania</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg bg-[#e1f6f0] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  family_star
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Atmosfera</h4>
+              <p>Stawiam głównie na komunikację, a zajęcia przebiegają w pozytywnej i przyjaznej
+                atmosferze aby ją maksymalnie ułatwić</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg bg-[#f8e7ec] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  auto_stories
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Materiały</h4>
+              <p>Korzystam z autentycznych materiałów na podstawie których tworzę oryginalne zajęcia;
+                posiadam dostęp do platform edukacyjnych z zasobami premium i wiem jak je wykorzystać,
+                aby pobudzić wyobraźnię, zachęcić do rozmowy oraz ciekawie wprowadzić użyteczne
+                zagadnienia językowe</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg !bg-[#fef3e4] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  devices
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Narzędzia</h4>
+              <p>Prowadzę zajęcia w formie zdalnej korzystając z narzędzi Google aby maksymalnie ułatwić i
+                usprawnić naszą współpracę</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg bg-[#e0e9fa] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  person_raised_hand
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Praca własna</h4>
+              <p>Proponuję zadania domowe lub wskazówki jak dodatkowo możesz pozostać w kontakcie z
+                angielskim nawet gdy nie ma mnie obok - jeśli chcesz szybko osiągnąć postępy to
+                samodzielna praca będzie kluczowym elementem 🙂</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg !bg-[#eaf3ef] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  history
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Powtórki</h4>
+              <p>Na każdych zajęciach jest czas na krótką powtórkę materiału z poprzedniej lekcji, dzięki
+                czemu utrwalasz w sobie nawyk regularnego powtarzania poznawanych zagadnień</p>
+            </div>
+          </div>
+          <div class="flex flex-row !mb-8">
+            <div>
+              <div class="svg-bg svg-bg-lg bg-[#f8e7ec] !rounded-[0.8rem] mr-5">
+                <span class="material-symbols-outlined">
+                  handshake
+                </span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[1rem]">Partnerstwo</h4>
+              <p>Traktuję Cię po partnersku; wspólnie pracujemy nad zwiększeniem Twojej pewności i
+                biegłości językowej</p>
+            </div>
+          </div>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
     </div>
-  </div>
-  <!-- End of Kontakt -->
+  </section>
+  <!-- /section -->
+  <!-- /section -->
+  <!-- End of Features -->
 
-  <script>
-    // AOL.js
-    AOS.init();
-
-    // AOS.init({
-    //   easing: 'ease-out-back',
-    //   duration: 1000
-    // });
-
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Scripts -->
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/theme.js"></script>
+  <!-- End of Scripts -->
 </body>
-
-</html>
