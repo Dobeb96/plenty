@@ -110,7 +110,7 @@
         <ul class="navbar-nav !flex-row !items-center !ml-auto">
           <li class="nav-item hidden xl:block lg:block md:block">
             <button onclick="document.querySelector('#google-scheduler button').click()"
-              class="btn btn-sm btn-primary text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:border-[#3f78e0] focus:shadow-[rgba(92,140,229,1)] active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] !rounded-[50rem]">
+              class="btn btn-sm btn-primary text-white !bg-[#dd6ba1] !border-[#dd6ba1] focus:shadow-[rgba(92,140,229,1)] !rounded-[50rem]">
               Zarezerwuj spotkanie
             </button>
           </li>
@@ -263,7 +263,7 @@
               src="./images/poznajmy sie.jpg" alt="Zdjęcie Paulina Leśniak - Plenty"></figure>
           <a href="https://podcasters.spotify.com/pod/show/tudro-talks6/episodes/Paulina---English-Teaching-Business-Owner-e2mp942"
             target="_blank"
-            class="btn btn-navy text-white !bg-[#343f52] border-[#343f52] hover:text-white hover:bg-[#343f52] hover:border-[#343f52] focus:shadow-[rgba(82,92,108,1)] active:text-white active:bg-[#343f52] active:border-[#343f52] disabled:text-white disabled:bg-[#343f52] disabled:border-[#343f52] !rounded-[50rem] mt-3 hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]">
+            class="!leading-6 mt-2 !py-2 !px-4 btn btn-primary !text-white !bg-[#dd6ba1] border-[#dd6ba1] focus:shadow-[rgba(92,140,229,1)] !rounded-[50rem] hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]">
             Posłuchaj odcinka podcastu z moim udziałem
           </a>
         </div>
@@ -578,14 +578,14 @@
                       window.addEventListener('load', function () {
                         calendar.schedulingButton.load({
                           url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c1qgyuNFp0dOcKnkUzUQLv_yTi2S5Xy2iOW1F4jEUtOxSXtHVkxS4Yl57a5lEXBjg_ympEKNS?gv=true',
-                          color: '#3f78e0',
+                          color: '#dd6ba1',
                           label: 'Zarezerwuj spotkanie',
                           target,
                         });
 
                         setTimeout(() => {
                           const googleButton = document.querySelector('#google-scheduler button')
-                          const buttonClasses = '!leading-6 !py-2 !px-4 btn btn-primary !text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:border-[#3f78e0] focus:shadow-[rgba(92,140,229,1)] active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] !rounded-[50rem] hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]'
+                          const buttonClasses = '!leading-6 !py-2 !px-4 btn btn-primary !text-white !bg-[#dd6ba1] border-[#dd6ba1] focus:shadow-[rgba(92,140,229,1)] active:text-white disabled:text-white !rounded-[50rem] hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]'
                           googleButton.classList.add(...buttonClasses.split(' '))
                         })
                       });
