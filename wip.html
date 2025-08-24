@@ -190,10 +190,11 @@
             Indywidualne i grupowe spotkania online, które pomogą Ci zyskać pewność siebie i czerpać radość z nauki.
           </h2>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onclick="document.querySelector('#google-scheduler button').click()"
-              class="text-nowrap bg-gradient-to-r from-[#dd6ba1] to-[#e785b5] text-white px-6 py-3 rounded-full font-medium hover:from-[#c55991] hover:to-[#dd6ba1] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <a href="#kontakt">
+            <button class="text-nowrap bg-gradient-to-r from-[#dd6ba1] to-[#e785b5] text-white px-6 py-3 rounded-full font-medium hover:from-[#c55991] hover:to-[#dd6ba1] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Zarezerwuj bezpłatne spotkanie
             </button>
+            </a>
             <a href="#poznajmy-sie"
               class="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-[#dd6ba1] transition-all duration-300">
               Poznajmy się
@@ -294,7 +295,7 @@
               class="inline-flex items-center gap-2 bg-[#54534d] text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-medium hover:bg-[#464540] transform rounded-sm hover:scale-105 transition-all duration-300 hover:shadow-xl shadow-md">
               <span class="text-lg">🎧</span>
               <span class="hidden sm:inline">Posłuchaj podcastu z moim udziałem</span>
-              <span class="sm:hidden">Podcast</span>
+              <span class="inline sm:hidden">Podcast</span>
             </a>
           </div>
         </div>
@@ -484,10 +485,12 @@
 
           <!-- Call to Action Button -->
           <div class="pt-4 sm:pt-6">
-            <button onclick="document.querySelector('#google-scheduler button').click()"
-              class="bg-gradient-to-r from-[#dd6ba1] to-[#e785b5] text-white px-6 sm:px-8 py-3 sm:py-4 text-sm font-medium hover:from-[#c55991] hover:to-[#dd6ba1] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full">
-              Zarezerwuj bezpłatne spotkanie zapoznawcze
-            </button>
+            <a href="#kontakt">
+              <button class="bg-gradient-to-r from-[#dd6ba1] to-[#e785b5] text-white px-6 sm:px-8 py-3 sm:py-4 text-sm font-medium hover:from-[#c55991] hover:to-[#dd6ba1] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full">
+                <span class="hidden sm:inline">Zarezerwuj bezpłatne spotkanie zapoznawcze</span>
+                <span class="inline sm:hidden">Zarezerwuj bezpłatne spotkanie</span>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -508,10 +511,10 @@
   <section id="kontakt" class="py-20 lg:py-32 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Single Contact Card -->
-      <div class="bg-white shadow-sm border border-gray-100 overflow-hidden">
+      <div class="bg-white shadow-sm border border-gray-100 overflow-hidden relative rounded-sm p-8 shadow-lg">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Left Side - Contact Info -->
-          <div class="p-8 lg:p-12 flex flex-col justify-center">
+          <div class="order-3 p-8 lg:p-12 flex flex-col justify-center">
             <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">Skontaktuj się ze mną</h2>
             <p class="text-gray-600 mb-8 leading-relaxed">
               <b class="text-accent">Zrób pierwszy krok</b>. Resztą zajmiemy się razem.
@@ -523,7 +526,7 @@
               <div class="flex-col space-y-4">
                 <a href="mailto:paulina@plenty.com.pl" 
                     class="flex items-center gap-4 text-gray-700 hover:text-accent transition-colors duration-300 group">
-                  <!-- Facebook icon -->
+                  <!-- Email icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
                   <span class="font-medium">paulina@plenty.com.pl</span>
                 </a>
@@ -543,8 +546,22 @@
             </div>
           </div>
 
+          <!-- OR Divider -->
+          <div class="absolute order-2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:flex items-center justify-center">
+            <div class="bg-white border border-gray-200 rounded-full w-16 h-16 flex items-center justify-center shadow-sm">
+              <span class="text-gray-600 font-semibold text-sm">LUB</span>
+            </div>
+          </div>
+
+          <!-- OR Divider - Mobile -->
+          <div class="lg:hidden order-2 flex items-center justify-center -my-8">
+            <div class="bg-white border border-gray-200 rounded-full size-12 flex items-center justify-center">
+              <span class="text-gray-600 font-medium text-sm">LUB</span>
+            </div>
+          </div>
+
           <!-- Right Side - Meeting Booking -->
-          <div class="p-8 lg:p-12 bg-gradient-to-br from-[#f8f1fd] via-[#fff5f8] to-[#fef7f4] flex flex-col justify-center">
+          <div class="order-1 p-8 lg:p-12 bg-gradient-to-br from-[#f8f1fd] via-[#fff5f8] to-[#fef7f4] flex flex-col justify-center">
             <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
               Zarezerwuj <b class="text-accent">15-minutowe spotkanie online</b>
             </h3>
@@ -564,7 +581,7 @@
                       calendar.schedulingButton.load({
                         url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c1qgyuNFp0dOcKnkUzUQLv_yTi2S5Xy2iOW1F4jEUtOxSXtHVkxS4Yl57a5lEXBjg_ympEKNS?gv=true',
                         color: '#dd6ba1',
-                        label: 'Zarezerwuj spotkanie',
+                        label: 'Zarezerwuj spotkanie Google Meet',
                         target,
                       });
 
