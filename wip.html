@@ -498,98 +498,96 @@
   <!-- End of Co zyskasz -->
 
   <!-- Full-width Image Section -->
-  <section class="relative min-h-screen">
-    <!-- <div class="absolute inset-0"> -->
+  <section class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0">
       <img src="./images/13.jpg" alt="Paulina Leśniak - Plenty"
-        class="size-full object-cover object-center">
-        asdasd
-    <!-- </div> -->
+        class="w-full h-full object-cover object-center">
+    </div>
   </section>
   <!-- End of Full-width Image Section -->
 
   <!-- Kontakt -->
-  <section id="kontakt" class="wrapper !bg-[#ffffff] leading-[1.7]">
-    <div class="container pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
-      <div class="">
-        <div class="relative flex flex-wrap mx-0">
-          <img
-            class="w-80 p-8 h-auto aspect-square bg-[#fffdfa] m-auto lg:mt-auto mt-8 flex-[0_0_auto] image-wrapper rounded-full hidden md:block bg-cover bg-[center_center] bg-no-repeat !bg-scroll"
-            src="./images/plenty_logo.svg" />
-          <img src="./assets/img/svg/doodle6.svg" style="transform: rotate(-2deg)"
-            class="absolute top-1/4 left-4 w-[22rem] xl:w-[30rem] 2xl:ml-12 !absolute hidden xl:block lg:block"
-            alt="image">
-          <!--/column -->
-          <div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] max-w-full">
-            <div class="p-10 md:!p-12 xl:!p-[4rem] lg:!p-[4rem]">
-              <h2
-                class="text-[calc(1.305rem_+_0.66vw)] font-bold xl:text-[1.8rem] leading-[1.3] mb-14 text-center lg:text-left xl:text-left">
-                Skontaktuj się
-                ze mną</h2>
-              <p class="lead !text-[1.05rem] !leading-[1.6] font-medium">Napisz do mnie na</p>
-              <p class="flex gap-2 items-center mb-1">
-                <ion-icon name="mail-outline"></ion-icon>
-                <a class="text-gray-600 hover:text-[#dd6ba1]"
-                  href="mailto:paulina@plenty.com.pl">paulina@plenty.com.pl</a>
-              </p>
-              <p class="mt-4 lead !text-[1.05rem] !leading-[1.6] font-medium">Znajdź mnie na social mediach</p>
-              <p class="flex gap-2 items-center mb-1">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <a class="text-gray-600 hover:text-[#dd6ba1]" href="https://www.facebook.com/plentypaulinalesniak/"
-                  target="_blank">
-                  Plenty Paulina Leśniak
-                </a>
-              </p>
-              <p class="flex gap-2 items-center mb-1">
-                <ion-icon name="logo-instagram"></ion-icon>
-                <a class="text-gray-600 hover:text-[#dd6ba1]" href="https://www.instagram.com/pl_en_ty/"
-                  target="_blank">
-                  pl_en_ty
-                </a>
-              </p>
-              <p class="flex gap-2 items-center mb-1">
-                <ion-icon name="logo-linkedin"></ion-icon>
-                <a class="text-gray-600 hover:text-[#dd6ba1]" href="https://www.linkedin.com/in/paulina-lesniak/"
-                  target="_blank">
-                  Paulina Leśniak
-                </a>
-              </p>
-              <p class="mt-4 lead font-medium">Zarezerwuj 15 minutowe spotkanie przez
-                Google Meet.
-                Poznamy się i ustalimy szczegóły współpracy 🤝</p>
-              <div id="google-scheduler" class="my-4">
-                <!-- Google Calendar Appointment Scheduling begin -->
-                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                <script>
-                    (function () {
-                      var target = document.currentScript;
-                      window.addEventListener('load', function () {
-                        calendar.schedulingButton.load({
-                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c1qgyuNFp0dOcKnkUzUQLv_yTi2S5Xy2iOW1F4jEUtOxSXtHVkxS4Yl57a5lEXBjg_ympEKNS?gv=true',
-                          color: '#dd6ba1',
-                          label: 'Zarezerwuj spotkanie',
-                          target,
-                        });
+  <section id="kontakt" class="py-20 lg:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Single Contact Card -->
+      <div class="bg-white shadow-sm border border-gray-100 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Left Side - Contact Info -->
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">Skontaktuj się ze mną</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              <b class="text-accent">Zrób pierwszy krok</b>. Resztą zajmiemy się razem.
+            </p>
 
-                        setTimeout(() => {
-                          const googleButton = document.querySelector('#google-scheduler button')
-                          const buttonClasses = '!leading-6 !py-2 !px-4 btn btn-primary !text-white !bg-[#dd6ba1] border-[#dd6ba1] focus:shadow-[rgba(92,140,229,1)] active:text-white disabled:text-white !rounded-[50rem] hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]'
-                          googleButton.classList.add(...buttonClasses.split(' '))
-                        })
-                      });
-                    })();
-                </script>
-                <!-- end Google Calendar Appointment Scheduling -->
+            <!-- Contact Methods -->
+            <div class="space-y-6">
+              <!-- Email -->
+              <div class="flex-col space-y-4">
+                <a href="mailto:paulina@plenty.com.pl" 
+                    class="flex items-center gap-4 text-gray-700 hover:text-accent transition-colors duration-300 group">
+                  <!-- Facebook icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                  <span class="font-medium">paulina@plenty.com.pl</span>
+                </a>
+                <a href="https://www.facebook.com/plentypaulinalesniak/" target="_blank"
+                    class="flex items-center gap-4 text-gray-700 hover:text-accent transition-colors duration-300 group">
+                  <!-- Facebook icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <span class="font-medium">Plenty Paulina Leśniak</span>
+                </a>
+                <a href="https://www.instagram.com/pl_en_ty/" target="_blank"
+                    class="flex items-center gap-4 text-gray-700 hover:text-accent transition-colors duration-300 group">
+                  <!-- Instagram icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  <span class="font-medium">pl_en_ty</span>
+                </a>
               </div>
-              <p class="italic text-xs">* Twoje dane będę przetwarzane w celu skontaktowania się z Tobą.</p>
             </div>
-            <!--/div -->
           </div>
-          <!--/column -->
+
+          <!-- Right Side - Meeting Booking -->
+          <div class="p-8 lg:p-12 bg-gradient-to-br from-[#f8f1fd] via-[#fff5f8] to-[#fef7f4] flex flex-col justify-center">
+            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+              Zarezerwuj <b class="text-accent">15-minutowe spotkanie online</b>
+            </h3>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              To świetna okazja, żeby się poznać i ustalić szczegóły współpracy.
+            </p>
+            
+            <!-- Google Scheduler Integration -->
+            <div id="google-scheduler" class="mb-6">
+              <!-- Google Calendar Appointment Scheduling begin -->
+              <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+              <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+              <script>
+                  (function () {
+                    var target = document.currentScript;
+                    window.addEventListener('load', function () {
+                      calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c1qgyuNFp0dOcKnkUzUQLv_yTi2S5Xy2iOW1F4jEUtOxSXtHVkxS4Yl57a5lEXBjg_ympEKNS?gv=true',
+                        color: '#dd6ba1',
+                        label: 'Zarezerwuj spotkanie',
+                        target,
+                      });
+
+                      setTimeout(() => {
+                        const googleButton = document.querySelector('#google-scheduler button')
+                        if (googleButton) {
+                          googleButton.className = 'bg-gradient-to-r from-[#dd6ba1] to-[#e785b5] text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-[#c55991] hover:to-[#dd6ba1] hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full'
+                        }
+                      }, 100)
+                    });
+                  })();
+              </script>
+              <!-- end Google Calendar Appointment Scheduling -->
+            </div>
+            
+            <p class="text-sm text-gray-400">
+              * Twoje dane będą przetwarzane w celu skontaktowania się z Tobą.
+            </p>
+          </div>
         </div>
-        <!--/.row -->
       </div>
-      <!-- /.card -->
     </div>
   </section>
   <!-- End of Kontakt -->
