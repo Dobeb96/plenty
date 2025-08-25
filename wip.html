@@ -583,6 +583,60 @@
   </section>
   <!-- End of Kontakt -->
 
+  <!-- Footer -->
+  <footer class="bg-[#464540] text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-8">
+        <!-- Logo and Tagline -->
+        <div class="space-y-4">
+          <img class="h-12 w-12 mx-auto" src="./images/plenty_logo.svg" alt="Plenty Logo">
+          <p class="font-medium">Plenty - miejsce gdzie angielski staje się Twój</p>
+        </div>
+        
+        <!-- Contact Links -->
+        <div class="flex justify-center space-x-8">
+          <!-- Email -->
+          <a href="mailto:paulina@plenty.com.pl" 
+             class="flex items-center gap-2 text-white hover:text-[#dd6ba1] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+            </svg>
+            <span class="sr-only">Email</span>
+          </a>
+          
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/plentypaulinalesniak/" target="_blank"
+             class="flex items-center gap-2 text-white hover:text-[#dd6ba1] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            <span class="sr-only">Facebook</span>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/pl_en_ty/" target="_blank"
+             class="flex items-center gap-2 text-white hover:text-[#dd6ba1] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 pt-8">
+          <p class="text-gray-400">
+            © <span id="current-year"></span> Plenty. Wszystkie prawa zastrzeżone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
   <!-- Scripts -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
@@ -642,6 +696,9 @@
           navbar.classList.remove('bg-white/98');
         }
       });
+
+      // Set current year in footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
     });
   </script>
   <!-- End of Scripts -->
